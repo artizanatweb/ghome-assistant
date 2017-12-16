@@ -33,7 +33,7 @@ class GoogleAssistant:
 
         # setup done
         return subprocess.Popen(["aplay", "/root/sounds/tgowht01.wav"], stdin=subprocess.PIPE,
-                         stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                                stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
     def process_event(self, event):
         """Pretty prints events.
@@ -141,7 +141,6 @@ class GoogleAssistant:
                                          stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                         self.lights_control(False)
                         continue
-
 
     def power_off(self):
         os.system('poweroff')

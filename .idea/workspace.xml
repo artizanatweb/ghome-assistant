@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c0dec7c-61eb-4ffe-9bfe-63b054372fd7" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fan.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hotword.orig.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hotword.py" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/GoogleAssistant.py" afterPath="$PROJECT_DIR$/modules/GoogleAssistant.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GoogleAssistant.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GoogleAssistant.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/GoogleAssistant.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="65" column="26" lean-forward="false" selection-start-line="65" selection-start-column="26" selection-end-line="65" selection-end-column="26" />
+            <state relative-caret-position="-327">
+              <caret line="100" column="35" lean-forward="false" selection-start-line="100" selection-start-column="35" selection-end-line="100" selection-end-column="35" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -64,7 +61,7 @@
       <file leaf-file-name="Fan.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/Fan.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
+            <state relative-caret-position="483">
               <caret line="53" column="38" lean-forward="false" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
@@ -88,11 +85,21 @@
       <file leaf-file-name="Player.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/Player.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2610">
-              <caret line="149" column="24" lean-forward="false" selection-start-line="149" selection-start-column="24" selection-end-line="149" selection-end-column="24" />
+            <state relative-caret-position="447">
+              <caret line="140" column="0" lean-forward="true" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -125,10 +132,11 @@
         <option value="$PROJECT_DIR$/fan.py" />
         <option value="$PROJECT_DIR$/application.py" />
         <option value="$PROJECT_DIR$/modules/Fan.py" />
-        <option value="$PROJECT_DIR$/modules/Player.py" />
         <option value="$PROJECT_DIR$/hotword.py" />
         <option value="$PROJECT_DIR$/modules/google_home_lights.py" />
         <option value="$PROJECT_DIR$/modules/GoogleAssistant.py" />
+        <option value="$PROJECT_DIR$/modules/Player.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -204,6 +212,21 @@
       <option name="presentableId" value="Default" />
       <updated>1512827128515</updated>
     </task>
+    <task id="LOCAL-00001" summary="removed unnecessary files">
+      <created>1513457022264</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1513457022264</updated>
+    </task>
+    <task id="LOCAL-00002" summary="removed unnecessary files">
+      <created>1513457380138</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1513457380138</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -232,31 +255,15 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="removed unnecessary files" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed unnecessary files" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/modules/Player.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2610">
-          <caret line="149" column="24" lean-forward="false" selection-start-line="149" selection-start-column="24" selection-end-line="149" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/pixel_ring.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="34" column="47" lean-forward="true" selection-start-line="34" selection-start-column="47" selection-end-line="34" selection-end-column="47" />
-          <folding>
-            <element signature="e#655#670#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hotword.orig.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -315,6 +322,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="13122">
           <caret line="735" column="6" lean-forward="false" selection-start-line="735" selection-start-column="6" selection-end-line="735" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -394,6 +402,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="13122">
           <caret line="735" column="6" lean-forward="false" selection-start-line="735" selection-start-column="6" selection-end-line="735" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -473,6 +482,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="13122">
           <caret line="735" column="6" lean-forward="false" selection-start-line="735" selection-start-column="6" selection-end-line="735" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -592,16 +602,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/Fan.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="53" column="38" lean-forward="false" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hotword.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -632,16 +632,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="829">
           <caret line="735" column="6" lean-forward="false" selection-start-line="735" selection-start-column="6" selection-end-line="735" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/Player.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2610">
-          <caret line="149" column="24" lean-forward="false" selection-start-line="149" selection-start-column="24" selection-end-line="149" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -681,11 +672,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/GoogleAssistant.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="65" column="26" lean-forward="false" selection-start-line="65" selection-start-column="26" selection-end-line="65" selection-end-column="26" />
+        <state relative-caret-position="-327">
+          <caret line="100" column="35" lean-forward="false" selection-start-line="100" selection-start-column="35" selection-end-line="100" selection-end-column="35" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/Fan.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="53" column="38" lean-forward="false" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/Player.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="140" column="0" lean-forward="true" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>

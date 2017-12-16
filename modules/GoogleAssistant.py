@@ -89,6 +89,7 @@ class GoogleAssistant:
                     if self.player.running:
                         assistant.stop_conversation()
                         self.player.off()
+                        lights.off()
                         subprocess.Popen(
                             ["espeak", "-a", self.response_volume, "-g", "9", "-ven+f3", '"Playlist stopped!"'],
                             stdin=subprocess.PIPE,

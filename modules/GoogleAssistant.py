@@ -99,7 +99,6 @@ class GoogleAssistant:
                     continue
 
                 usrcmd = event.args
-                # print(str(usrcmd).lower())
                 if 'playlist'.lower() in str(usrcmd).lower():
                     assistant.stop_conversation()
                     self.player.playlist_actions(str(usrcmd).lower(), usrcmd)

@@ -25,8 +25,6 @@ class Player(threading.Thread):
             if self.start_flag and not self.running:
                 print("I am going to start mplayer")
                 self.running = True
-                # self.sp = subprocess.Popen(["mplayer", "-volume", "50", self.path],
-                #                            stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                 os.system('mplayer -af volume=' + str(self.volume) + ' ' + self.path + self.playlist + self.files)
                 print("MPlayer started!")
 
@@ -46,16 +44,8 @@ class Player(threading.Thread):
 
         self.start_flag = False
 
-        # self.sp.kill()
-        # self.sp.terminate()
         self.running = False
         os.system('killall mplayer')
-        # self.sp.stdin.write("q")
-        # try:
-        #     self.join()
-        # except (ValueError, AttributeError, Exception) as e:
-        #     print("*****Can't JOIN thread*****")
-        #     print(e)
 
     def clear(self):
         if self.running:

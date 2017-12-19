@@ -149,6 +149,12 @@ class GoogleAssistant:
                                          stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                         self.lights_control(False)
                         continue
+                    if 'clear'.lower() in str(usrcmd).lower():
+                        subprocess.Popen(["aplay", "/root/sounds/mousedown2.wav"], stdin=subprocess.PIPE,
+                                         stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                        lights.off
+                        continue
+
 
     def power_off(self):
         os.system('poweroff')

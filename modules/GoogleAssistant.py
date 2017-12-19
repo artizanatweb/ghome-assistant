@@ -117,6 +117,13 @@ class GoogleAssistant:
                     self.power_off()
                     continue
 
+                if "reboot".lower() in str(usrcmd).lower():
+                    assistant.stop_conversation()
+                    subprocess.Popen(["aplay", "/root/sounds/utcwht01.wav"], stdin=subprocess.PIPE,
+                                     stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                    self.reboot()
+                    continue
+
                 if 'ventilator'.lower() in str(usrcmd).lower():
                     assistant.stop_conversation()
                     if 'start'.lower() in str(usrcmd).lower() or 'on'.lower() in str(usrcmd).lower():
@@ -145,6 +152,9 @@ class GoogleAssistant:
 
     def power_off(self):
         os.system('poweroff')
+
+    def reboot(self):
+        os.system('reboot');
 
     def lights_control(self, param: bool):
         if param:

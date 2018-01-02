@@ -132,7 +132,7 @@ class Player(threading.Thread):
                 self.speech.say("Playlist found: " + new_playlist)
             else:
                 # os.system("espeak -a " + self.response_volume + " -g 9 -ven+f3 \"Playlist not found! Please try again!\"")
-                self.speech.say("Playlist not found! Please try again!")
+                self.speech.say("Playlist not found. Please try again!")
 
     def volume_actions(self, raw_resp):
         if 'text' not in raw_resp:

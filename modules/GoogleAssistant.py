@@ -137,6 +137,7 @@ class GoogleAssistant:
                             self.speech.say("Ventilator is already started!")
                         else:
                             self.speech.say("Ventilator started!")
+                        lights.off()
                         continue
                     if 'stop'.lower() in str(usrcmd).lower() or 'off'.lower() in str(usrcmd).lower():
                         subprocess.Popen(["aplay", "/root/sounds/mousedown2.wav"], stdin=subprocess.PIPE,
@@ -146,11 +147,13 @@ class GoogleAssistant:
                             self.speech.say("Ventilator is already stopped!")
                         else:
                             self.speech.say("Ventilator stopped!")
+                        lights.off()
                         continue
                     if 'status'.lower() in str(usrcmd).lower() or 'state'.lower() in str(usrcmd).lower():
                         self.fan.get_temperature()
                         subprocess.Popen(["aplay", "/root/sounds/mousedown2.wav"], stdin=subprocess.PIPE,
                                          stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                        lights.off()
                         continue
 
                 if 'lights'.lower() in str(usrcmd).lower():
@@ -183,7 +186,7 @@ class GoogleAssistant:
         if param:
             self.speech.say("Setting ring lights to on.")
             print("LIGHTS ON")
-            lights.wakeup()
+            # lights.wakeup()
         if not param:
             self.speech.say("Setting ring lights to off.")
             print("LIGHTS OUT")

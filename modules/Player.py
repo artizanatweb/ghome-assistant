@@ -139,10 +139,11 @@ class Player(threading.Thread):
             return
         tts_array_response = nltk.word_tokenize(raw_resp['text'])
 
-        if 'set' in tts_array_response:
+        if 'set' in tts_array_response or 'change' in tts_array_response:
             try:
                 tts_array_response.remove('volume')
                 tts_array_response.remove('set')
+                tts_array_response.remove('change')
             except ValueError as e:
                 print(e)
 

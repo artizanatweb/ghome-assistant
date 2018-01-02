@@ -153,9 +153,10 @@ class GoogleAssistant:
                         self.lights_control(False)
                         continue
                     if 'clear'.lower() in str(usrcmd).lower():
-                        subprocess.Popen(["aplay", "/root/sounds/mousedown2.wav"], stdin=subprocess.PIPE,
-                                         stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-                        lights.off
+                        # subprocess.Popen(["aplay", "/root/sounds/mousedown2.wav"], stdin=subprocess.PIPE,
+                        #                  stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                        self.speech.say("Setting ring lights to clear.")
+                        lights.off()
                         continue
 
 
@@ -163,13 +164,17 @@ class GoogleAssistant:
         os.system('poweroff')
 
     def reboot(self):
-        os.system('reboot');
+        os.system('reboot')
 
     def lights_control(self, param: bool):
         if param:
+            self.speech.say("Setting ring lights to on.")
             print("LIGHTS ON")
+            lights.wakeup(1)
         if not param:
+            self.speech.say("Setting ring lights to off.")
             print("LIGHTS OUT")
+            lights.off()
 
     def clear(self):
         self.fan.clear()

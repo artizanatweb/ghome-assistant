@@ -170,7 +170,7 @@ class GoogleAssistant:
         if param:
             self.speech.say("Setting ring lights to on.")
             print("LIGHTS ON")
-            lights.wakeup(1)
+            lights.wakeup()
         if not param:
             self.speech.say("Setting ring lights to off.")
             print("LIGHTS OUT")

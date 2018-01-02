@@ -15,6 +15,7 @@ from modules.google_home_lights import lights
 
 from modules.Player import Player
 from modules.Fan import Fan
+from modules.Speech import Speech
 
 
 class GoogleAssistant:
@@ -23,6 +24,7 @@ class GoogleAssistant:
         self.player = Player()
         self.process_title = ""
         self.response_volume = "40"
+        self.speech = Speech()
 
     def set_process_title(self, process_title):
         self.process_title = process_title
@@ -90,10 +92,11 @@ class GoogleAssistant:
                         assistant.stop_conversation()
                         self.player.off()
                         lights.off()
-                        subprocess.Popen(
-                            ["espeak", "-a", self.response_volume, "-g", "9", "-ven+f3", '"Playlist stopped!"'],
-                            stdin=subprocess.PIPE,
-                            stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                        # subprocess.Popen(
+                        #     ["espeak", "-a", self.response_volume, "-g", "9", "-ven+f3", '"Playlist stopped!"'],
+                        #     stdin=subprocess.PIPE,
+                        #     stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                        self.speech.say("Playlist stopped!")
                         continue
 
                 if event.type != EventType.ON_RECOGNIZING_SPEECH_FINISHED:

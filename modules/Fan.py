@@ -47,7 +47,7 @@ class Fan(threading.Thread):
         self.read_temp()
 
         print("FAN OFF")
-        return self.state
+        return True
 
     def update(self):
         GPIO.output(self.PIN, self.state)

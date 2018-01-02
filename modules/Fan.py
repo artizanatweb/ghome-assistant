@@ -27,22 +27,24 @@ class Fan(threading.Thread):
 
     def on(self):
         if self.state:
-            return
+            return False
 
         self.state = True
         self.update()
 
         print("FAN ON")
+        return self.state
 
     def off(self):
         if not self.state:
-            return
+            return False
 
         self.state = False
         self.update()
         self.read_temp()
 
         print("FAN OFF")
+        return self.state
 
     def update(self):
         GPIO.output(self.PIN, self.state)

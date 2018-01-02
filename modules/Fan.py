@@ -60,7 +60,7 @@ class Fan(threading.Thread):
         fl_temp = float(literal_tmp)
         if fl_temp >= 46:
             self.on()
-            self.speech.say("CPU temperature is " + str(int(fl_temp)) + " degrees. Ventilator started!")
+            self.speech.say("CPU temperature is " + literal_tmp + " degrees. Ventilator started!")
 
     def clear(self):
         GPIO.cleanup()
@@ -76,6 +76,4 @@ class Fan(threading.Thread):
         temp = os.popen("vcgencmd measure_temp").readline()
         tmp = temp.replace("temp=", "")
         literal_tmp = tmp.replace("'C\n", "")
-        int_temp = int(literal_tmp)
-        str_tmp = str(int_temp)
-        self.speech.say("CPU temperature is " + str_tmp + " degrees Celsius.")
+        self.speech.say("CPU temperature is " + literal_tmp + " degrees Celsius.")

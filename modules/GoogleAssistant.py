@@ -147,6 +147,11 @@ class GoogleAssistant:
                         else:
                             self.speech.say("Ventilator stopped!")
                         continue
+                    if 'status'.lower() in str(usrcmd).lower() or 'state'.lower() in str(usrcmd).lower():
+                        self.fan.get_temperature()
+                        subprocess.Popen(["aplay", "/root/sounds/mousedown2.wav"], stdin=subprocess.PIPE,
+                                         stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                        continue
 
                 if 'lights'.lower() in str(usrcmd).lower():
                     assistant.stop_conversation()

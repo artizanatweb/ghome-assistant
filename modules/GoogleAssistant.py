@@ -3,7 +3,7 @@ from __future__ import print_function
 import argparse
 import os.path
 import json
-import nltk
+# import nltk
 import subprocess
 
 import google.oauth2.credentials

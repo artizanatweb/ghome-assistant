@@ -4,6 +4,8 @@ import subprocess
 import time
 import nltk
 
+from modules.Speech import Speech
+
 
 class Player(threading.Thread):
     def __init__(self):
@@ -19,6 +21,7 @@ class Player(threading.Thread):
         self.maxVol = 10
         self.volume = -25
         self.response_volume = "40"
+        self.speech = Speech()
 
     def run(self):
         while self.active:
@@ -97,7 +100,8 @@ class Player(threading.Thread):
 
     def playlist_actions(self, str_resp, raw_resp):
         if 'start' in str_resp:
-            os.system("espeak -a " + self.response_volume + " -g 9 -ven+f3 \"Starting playlist!\"")
+            # os.system("espeak -a " + self.response_volume + " -g 9 -ven+f3 \"Starting playlist!\"")
+            self.speech.say("Starting playlist!")
             return self.on()
         if 'stop' in str_resp:
             os.system('aplay /root/sounds/tdrwht01.wav')
@@ -123,9 +127,11 @@ class Player(threading.Thread):
 
             if new_playlist is not None:
                 self.set_playlist(new_playlist)
-                os.system("espeak -a " + self.response_volume + " -g 9 -ven+f3 \"Playlist found: " + new_playlist + "\"")
+                # os.system("espeak -a " + self.respons + " -g 9 -ven+f3 \"Playlist found: " + new_playlist + "\"")
+                self.speech.say("Playlist found: " + new_playlist)
             else:
-                os.system("espeak -a " + self.response_volume + " -g 9 -ven+f3 \"Playlist not found! Please try again!\"")
+                # os.system("espeak -a " + self.response_volume + " -g 9 -ven+f3 \"Playlist not found! Please try again!\"")
+                self.speech.say("Playlist not found! Please try again!")
 
     def volume_actions(self, raw_resp):
         if 'text' not in raw_resp:
@@ -150,8 +156,10 @@ class Player(threading.Thread):
                 new_volume = self.set_volume(number)
                 print(new_volume)
 
-                os.system("espeak -a " + self.response_volume + " -g 9 -ven+f3 \"New volume set to : " + word + "\"")
+                # os.system("espeak -a " + self.response_volume + " -g 9 -ven+f3 \"New volume set to : " + word + "\"")
+                self.speech.say("New volume set to : " + word)
                 vol = word
 
             if vol is None:
-                os.system("espeak -a " + self.response_volume + " -g 9 -ven+f3 \"Volume not changed!\"")
+                # os.system("espeak -a " + self.response_volume + " -g 9 -ven+f3 \"Volume not changed!\"")
+                self.speech.say("Volume not changed!")

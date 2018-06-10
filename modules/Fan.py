@@ -58,7 +58,7 @@ class Fan(threading.Thread):
         literal_tmp = tmp.replace("'C\n", "")
         print('Temp read: ', literal_tmp)
         fl_temp = float(literal_tmp)
-        if fl_temp >= 46:
+        if fl_temp >= 66:
             self.on()
             self.speech.say("CPU temperature is " + literal_tmp + " degrees. Ventilator started!")
 

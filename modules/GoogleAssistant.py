@@ -81,7 +81,7 @@ class GoogleAssistant:
             credentials = google.oauth2.credentials.Credentials(token=None,
                                                                 **json.load(f))
 
-        with Assistant(credentials) as assistant:
+        with Assistant(credentials, 'rpihome') as assistant:
             for event in assistant.start():
                 self.process_event(event)
 
